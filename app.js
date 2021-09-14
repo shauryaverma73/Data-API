@@ -14,6 +14,7 @@ app.get('/users/:id', (req, res) => {
     const element = data.find((el) => {
         return (el.id == id);
     });
+    res.status(200).json(element);
 });
 
 app.listen(5001, () => {
